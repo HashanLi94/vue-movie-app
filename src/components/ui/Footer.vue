@@ -32,7 +32,7 @@
 
 		<div class="border-t-[0.5px] border-slate-400 text-[#B7B7B7] text-[16px]">
 			<div
-				class="page-layout flex flex-col gap-y-4 py-6 text-center sm:flex-row sm:justify-between sm:text-left"
+				class="page-layout flex flex-col gap-y-4 py-6 text-center lg:flex-row lg:justify-between lg:text-left"
 			>
 				<div class="">Copyright © 2022 IT Hote ls. All rights reserved.</div>
 				<div class="">

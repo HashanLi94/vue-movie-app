@@ -1,5 +1,5 @@
 <script setup>
-	import { ref, watch } from "vue";
+	import { ref, watch, defineEmits } from "vue";
 	const props = defineProps({
 		movie: {
 			required: true,
@@ -19,6 +19,12 @@
 			deep: true,
 		}
 	);
+
+	const emits = defineEmits("onMovieRemove");
+
+	const onRemoveItem = (id) => {
+		emits("onMovieRemove", id);
+	};
 </script>
 <template>
 	<div
@@ -36,7 +42,7 @@
 				alt="movie_image"
 			/>
 			<div class="flex-auto px-6 py-2">
-				<p class="mt-4 mb-3 text-[32px] font-[400] fon-din">
+				<p class="mt-4 mb-3 text-[32px] font-[400] font-din">
 					{{ details?.name ?? "N/A" }}
 				</p>
 				<p
@@ -46,7 +52,10 @@
 			</div>
 		</router-link>
 
-		<button class="bg-[#1D1D1DE6] absolute top-3 right-3 p-4 z-[99]">
+		<button
+			class="bg-[#1D1D1DE6] absolute top-3 right-3 p-4 z-[99]"
+			@click="onRemoveItem(details?.id)"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"

@@ -29,7 +29,11 @@
 				required: helpers.withMessage("Email is Required", required),
 				email: helpers.withMessage("Invalid Email address", email),
 			},
+			message: {
+				required: helpers.withMessage("Message is Required", required),
+			},
 			telephone: {
+				required: helpers.withMessage("Telephone number is Required", required),
 				validPhoneNumber: helpers.withMessage(
 					"Invalid Phone Number",
 					validPhoneNumber
@@ -59,7 +63,7 @@
 	<div class="form-contact-us-form">
 		<form
 			@submit.prevent="handleSubmit"
-			class="relative space-y-3 max-w-screen-md mx-auto rounded-md py-6 shadow-xl lg:py-10 text-white"
+			class="relative space-y-3 max-w-screen-md mx-auto rounded-md pt-12 shadow-xl lg:pt-10 text-white"
 		>
 			<div class="grid gap-3 md:grid-cols-2">
 				<div>
@@ -155,8 +159,21 @@
 					type="text"
 					rows="6"
 					class="mt-2 w-full rounded-md bg-[#3C3C3C] px-3 resize-y"
-					v-model="form.message"
+					:class="{
+						'border border-red-500 focus:border-red-500': v$.message.$error,
+						'border border-[#42d392] ': !v$.message.$invalid,
+					}"
+					v-model="v$.message.$model"
+					@input="v$.message.$touch"
+					@blur="v$.message.$touch"
 				/>
+				<p
+					class="text-red-500 text-sm font-[400] ml-2 mt-1"
+					v-for="error of v$.message.$errors"
+					:key="error.$uid"
+				>
+					{{ error.$message }}
+				</p>
 			</div>
 
 			<div>
@@ -172,7 +189,7 @@
 						@change="v$.acceptTerms.$touch"
 						@blur="v$.acceptTerms.$touch"
 					/>
-					<label for="checkbox1" class="text-[20px]"
+					<label for="checkbox1" class="text-[16px] md:text-[20px]"
 						>I agree to the
 						<router-link
 							to="/"
