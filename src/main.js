@@ -7,16 +7,13 @@ import router from "./router/index";
 import axios from "axios";
 import VueAxios from "vue-axios";
 
-// Google Maps
-import VueGoogleMaps from "@fawmi/vue-google-maps";
+// aOS animation Library
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const app = createApp(App);
 app.use(router); // Access router
 app.use(VueAxios, axios); // Access the axios globally
-app.use(VueGoogleMaps, {
-	load: {
-		key: "",
-		// language: 'de',
-	},
-}); // Access the vue google maps service globally
+app.use(AOS); // Access the AOS globally
+
 app.mount("#app");

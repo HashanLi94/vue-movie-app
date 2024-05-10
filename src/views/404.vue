@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-	<div class="flex flex-col items-center justify-center my-24">
+	<div class="flex flex-col items-center justify-center py-24 bg-[#f0eded]">
 		<h1 class="mb-4 text-6xl font-semibold text-red-500">404</h1>
 		<p class="mb-4 text-lg text-gray-600">Oops! Looks like you're lost.</p>
 		<div class="animate-bounce">

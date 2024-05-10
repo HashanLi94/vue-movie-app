@@ -1,4 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Home from "../views/Home.vue";
 
 const routes = [
@@ -19,6 +21,11 @@ const router = createRouter({
 	linkActiveClass: "border-b border-indigo-50",
 	linkExactActiveClass: "border-b border-indigo-50",
 	routes,
+});
+
+router.beforeEach((to, from, next) => {
+	AOS.init(); // Initialize AOS
+	next();
 });
 
 export default router;

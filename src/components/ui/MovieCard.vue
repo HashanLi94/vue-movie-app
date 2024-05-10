@@ -31,7 +31,7 @@
 		:id="details?.id"
 		class="app-movie-card relative mx-auto flex w-full flex-col overflow-hidden rounded-md bg-[#3c3c3c] text-white transition hover:translate-y-2 hover:shadow-lg"
 	>
-		<router-link to="/" class="relative">
+		<router-link :to="`/movie/${details.id}`" class="relative">
 			<img
 				:src="
 					details?.image?.medium

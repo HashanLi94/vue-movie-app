@@ -36,13 +36,19 @@
 			>
 				<div class="">Copyright © 2022 IT Hote ls. All rights reserved.</div>
 				<div class="">
-					Photos by Felix Mooneeram & 
+					Photos by Felix Mooneeram &
 
-					<router-link class="underline hover:opacity-80" to="/"
+					<router-link
+						class="underline hover:opacity-80"
+						target="_black"
+						to="/www.google.com"
 						>Serge Kutuzov</router-link
 					>
 					on
-					<router-link class="underline hover:opacity-80" to="/"
+					<router-link
+						class="underline hover:opacity-80"
+						to="/www.facebook.com"
+						target="_black"
 						>Unsplash</router-link
 					>
 				</div>
