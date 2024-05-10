@@ -6,6 +6,8 @@ export default {
 			fontFamily: {
 				sans: ["Open-sans", "sans-serif"],
 				inter: ["Inter", "sans-serif"],
+				din: ["DIN", "sans-serif"],
+				dinBold: ["DIN-Bold", "sans-serif"],
 			},
 		},
 	},
