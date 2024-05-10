@@ -34,14 +34,15 @@
 			<div
 				class="page-layout flex flex-col gap-y-4 py-6 text-center sm:flex-row sm:justify-between sm:text-left"
 			>
-				<div>Copyright © 2022 IT Hote ls. All rights reserved.</div>
-				<div>
-					Photos by Felix Mooneeram & on Unsplash
+				<div class="">Copyright © 2022 IT Hote ls. All rights reserved.</div>
+				<div class="">
+					Photos by Felix Mooneeram & 
+
 					<router-link class="underline hover:opacity-80" to="/"
 						>Serge Kutuzov</router-link
 					>
-
-					<router-link class="underline hover:opacity-80 ml-1" to="/"
+					on
+					<router-link class="underline hover:opacity-80" to="/"
 						>Unsplash</router-link
 					>
 				</div>
