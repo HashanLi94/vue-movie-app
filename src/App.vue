@@ -5,7 +5,7 @@
 
 <template>
 	<div
-		class="app-wrapper w-full min-h-screen flex flex-col overflow-x-hidden overflow-y-scroll font-sans"
+		class="app-wrapper w-full min-h-screen flex flex-col overflow-x-hidden font-sans"
 	>
 		<Header />
 
