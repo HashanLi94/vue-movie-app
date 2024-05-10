@@ -11,7 +11,9 @@
 
 	const fetchMovies = async () => {
 		try {
-			const { data } = await axios.get(`https://api.tvmaze.com/shows?page=0&perPage=5`);
+			const { data } = await axios.get(
+				`https://api.tvmaze.com/shows?page=0&perPage=5`
+			);
 			movieCollection.value = data;
 		} catch (error) {
 			console.log(error);
@@ -23,11 +25,11 @@
 		ref="movies_collection_section"
 		class="w-full min-h-screen bg-[#1D1D1D] text-white"
 	>
-		<div class="section-wrapper flex flex-col px-2 py-8 md:mx-12">
+		<div class="section-wrapper page-layout flex flex-col py-8">
 			<div
-				class="section-header flex flex-row items-center justify-between border-b-2 border-white pb-8"
+				class="section-header flex flex-col space-y-8 md:space-y-0 md:flex-row md:items-center md:justify-between border-b-2 border-white pb-8"
 			>
-				<h2 class="text-xl lg:text-3xl font-bold">Movie Library</h2>
+				<h2 class="text-xl lg:text-3xl font-bold">Collect your favorites</h2>
 				<div class="search-area">
 					<div
 						class="relative mx-auto flex w-full max-w-2xl items-center justify-between rounded-md border border-white shadow-lg bg-[#1D1D1D]"
@@ -58,7 +60,7 @@
 			</div>
 			<div class="section-body my-8">
 				<div
-					class="grid max-full justify-center sm:grid-cols-2 sm:gap-6 md:grid-cols-3"
+					class="grid max-full justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 				>
 					<MovieCard
 						v-for="(item, idx) in movieCollection"

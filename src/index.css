@@ -1,8 +1,36 @@
+@import './assets/css/layout.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 * {
 	padding: 0;
 	margin: 0;
 }
+
+@layer base {
+	@font-face {
+		font-family: "Open-sans";
+		src: url("../src/assets/fonts/open_sans/OpenSans-Regular.ttf")
+				format("truetype"),
+			url("../src/assets/fonts/open_sans/OpenSans-Regular.ttf")
+				format("truetype");
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Inter";
+		src: url("../src/assets/fonts/Inter/Inter-Regular.ttf") format("truetype"),
+			url("../src/assets/fonts/open_sans/Inter-Regular.ttf") format("truetype");
+		font-style: normal;
+		font-display: swap;
+	}
+}
+
+
+
+

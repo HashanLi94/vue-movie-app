@@ -6,9 +6,9 @@
 <template>
 	<section
 		ref="movies_collection_section"
-		class="w-full min-h-screen bg-[#000000] text-white"
+		class="w-full lg:min-h-screen bg-[#000000] text-white"
 	>
-		<div class="section-wrapper flex flex-col px-2 py-8 md:mx-12">
+		<div class="section-wrapper page-layout flex flex-col py-8">
 			<div class="section-header flex flex-col space-y-2">
 				<h2 class="text-xl lg:text-3xl font-bold">How To Reach Us</h2>
 				<p class="text-md lg:text-xl font-medium text-[#B7B7B7]">
