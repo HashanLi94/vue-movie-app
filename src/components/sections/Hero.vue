@@ -2,12 +2,16 @@
 	import homeBanner from "../../assets/imgs/Home_banner.jpg";
 </script>
 <template>
-	<section
-		ref="hero_section"
-		class="w-full bg-center bg-cover bg-no-repeat h-screen bg-black text-white"
-		:style="{ backgroundImage: `url(${homeBanner})` }"
-	>
-		<div class="flex flex-col px-2 md:mx-12 absolute bottom-10 left-0">
+	<section ref="hero_section" class="relative w-full bg-black text-white lg:min-h-screen">
+		<div class="">
+			<img
+				:src="homeBanner"
+				alt="hero_image"
+				class="relative object-center object-fill h-[500px] lg:h-[660px] w-full"
+			/>
+		</div>
+
+		<div class="flex flex-col page-layout pt-6 pb-16 lg:pt-6 lg:pb-24 space-y-4">
 			<h2 class="text-4xl lg:text-5xl font-bold">Movie Library</h2>
 			<p class="max-w-3xl text-lg text-gray-300">
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum sit
