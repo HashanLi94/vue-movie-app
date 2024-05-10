@@ -1,92 +1,22 @@
 <script setup>
-	import { ref } from "vue";
+	import { ref, onMounted } from "vue";
+	import axios from "axios";
 	import MovieCard from "../ui/MovieCard.vue";
 
-	const movieCollection = ref([
-		{
-			id: 1,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
-		{
-			id: 2,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
-		{
-			id: 3,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
-		{
-			id: 4,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
-		{
-			id: 5,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
-		{
-			id: 6,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
+	onMounted(async () => {
+		await fetchMovies();
+	});
 
-		{
-			id: 7,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
+	const movieCollection = ref([]);
 
-		{
-			id: 8,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
-		{
-			id: 9,
-			image: "",
-			movieDetails: {
-				name: "Batman Returns",
-				description:
-					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id at cupiditate non quasi doloremque dolores aliquid quo ea mollitia et!",
-			},
-		},
-	]);
+	const fetchMovies = async () => {
+		try {
+			const { data } = await axios.get(`https://api.tvmaze.com/shows?page=0&perPage=5`);
+			movieCollection.value = data;
+		} catch (error) {
+			console.log(error);
+		}
+	};
 </script>
 <template>
 	<section
