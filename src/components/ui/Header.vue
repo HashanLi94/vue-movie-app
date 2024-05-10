@@ -1,12 +1,13 @@
 <script setup></script>
 <template>
-	<header class="sticky top-0 shadow bg-black text-white font-inter">
+	<header class="sticky top-0 shadow bg-black text-white font-inter z-50">
 		<div
-			class="page-layout sticky top-0 flex flex-col overflow-hidden py-6 md:flex-row md:items-center md:justify-between"
+			class="page-layout flex flex-col overflow-hidden py-6 md:flex-row md:items-center justify-between"
 		>
+			<!-- Brand -->
 			<router-link
 				to="/"
-				class="flex items-center whitespace-nowrap text-2xl font-black"
+				class="flex items-center whitespace-nowrap text-2xl font-black border-none"
 			>
 				<img
 					src="../../assets/imgs/logo.png"
@@ -16,9 +17,11 @@
 
 				<span class="">Logoipsum</span>
 			</router-link>
+
+			<!-- Hamburger menu -->
 			<input type="checkbox" class="peer hidden" id="navbar-open" />
 			<label
-				class="absolute top-5 right-7 cursor-pointer md:hidden"
+				class="absolute top-8 right-7 cursor-pointer md:hidden"
 				for="navbar-open"
 			>
 				<span class="sr-only">Toggle Navigation</span>
@@ -37,6 +40,8 @@
 					/>
 				</svg>
 			</label>
+
+			<!-- Routing list -->
 			<nav
 				aria-label="Header Navigation"
 				class="peer-checked:mt-8 peer-checked:max-h-56 flex max-h-0 w-full flex-col items-center justify-between overflow-hidden transition-all md:ml-24 md:max-h-full md:flex-row md:items-start"
@@ -44,22 +49,24 @@
 				<ul
 					class="flex flex-col items-center space-y-2 md:ml-auto md:flex-row md:space-y-0 text-[16px] md:text-[14px] lg:text-[16px]"
 				>
-					<li class="md:mr-8 lg:mr-10 hover:opacity-80 uppercase cursor-pointer">
+					<li class="md:mr-8 hover:opacity-80 uppercase cursor-pointer">
 						<router-link to="/">Home</router-link>
 					</li>
-					<li class="md:mr-8 lg:mr-10 hover:opacity-80 uppercase cursor-pointer">
-						<router-link to="/">Our Screens</router-link>
+					<li class="md:mr-8 hover:opacity-80 uppercase cursor-pointer">
+						<router-link to="/our-screens">Our Screens</router-link>
 					</li>
-					<li class="md:mr-8 lg:mr-10 hover:opacity-80 uppercase cursor-pointer">
-						<router-link to="/">Schedule</router-link>
+					<li class="md:mr-10 hover:opacity-80 uppercase cursor-pointer">
+						<router-link to="/schedule">Schedule</router-link>
 					</li>
-					<li class="md:mr-8 lg:mr-10 hover:opacity-80 uppercase cursor-pointer">
-						<router-link to="/">Movie Library</router-link>
+					<li class="md:mr-8 hover:opacity-80 uppercase cursor-pointer">
+						<router-link to="/movie-library">Movie Library</router-link>
 					</li>
 					<li
-						class="md:mr-8 lg:mr-10 hover:opacity-80 uppercase cursor-pointer block md:hidden lg:block"
+						class="md:mr-8 hover:opacity-80 uppercase cursor-pointer block md:hidden lg:block"
 					>
-						<router-link to="/">Location & Contact</router-link>
+						<router-link to="/location-and-contact"
+							>Location & Contact</router-link
+						>
 					</li>
 					<li class="hover:opacity-80 hidden md:block">
 						<button class="px-2 py-1 font-medium transition-color">
@@ -85,4 +92,9 @@
 	</header>
 </template>
 
-<style></style>
+<style scoped>
+	.router-link-exact-active {
+		font-weight: 700;
+		background-color: red;
+	}
+</style>

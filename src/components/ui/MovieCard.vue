@@ -53,7 +53,7 @@
 		</router-link>
 
 		<button
-			class="bg-[#1D1D1DE6] absolute top-3 right-3 p-4 z-[99]"
+			class="bg-[#1D1D1DE6] absolute top-3 right-3 p-4 z-[10]"
 			@click="onRemoveItem(details?.id)"
 		>
 			<svg

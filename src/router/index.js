@@ -7,10 +7,17 @@ const routes = [
 		name: "Home",
 		component: Home,
 	},
+	{
+		path: "/:pathMatch(.*)*",
+		name: "not-found",
+		component: () => import("../views/404.vue"),
+	},
 ];
 
 const router = createRouter({
 	history: createWebHistory(),
+	linkActiveClass: "border-b border-indigo-50",
+	linkExactActiveClass: "border-b border-indigo-50",
 	routes,
 });
 
