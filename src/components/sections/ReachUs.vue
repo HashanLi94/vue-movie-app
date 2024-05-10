@@ -10,8 +10,8 @@
 	>
 		<div class="section-wrapper page-layout flex flex-col py-8">
 			<div class="section-header flex flex-col space-y-2">
-				<h2 class="text-xl lg:text-3xl font-bold">How To Reach Us</h2>
-				<p class="text-md lg:text-xl font-medium text-[#B7B7B7]">
+				<o class="text-[36px] font-bold font-dinBold">How To Reach Us</o>
+				<p class="text-[20px] font-medium text-[#B7B7B7] font-sans">
 					Lorem ipsum dolor sit amet.
 				</p>
 			</div>

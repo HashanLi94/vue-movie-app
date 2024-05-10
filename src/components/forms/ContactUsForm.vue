@@ -196,7 +196,7 @@
 			<div class="flex items-end justify-end">
 				<button
 					type="submit"
-					class="mt-5 rounded-sm bg-[#cc9601] py-4 px-16 text-center font-semibold text-white"
+					class="font-inter mt-5 rounded-sm bg-[#cc9601] py-4 px-16 text-center font-[500] text-white text-[16px]"
 				>
 					Submit
 				</button>
