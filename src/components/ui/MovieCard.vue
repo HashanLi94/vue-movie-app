@@ -36,11 +36,11 @@
 				alt="movie_image"
 			/>
 			<div class="flex-auto px-6 py-2">
-				<h3 class="mt-4 mb-3 text-[32px] font-[400]">
+				<p class="mt-4 mb-3 text-[32px] font-[400] fon-din">
 					{{ details?.name ?? "N/A" }}
-				</h3>
+				</p>
 				<p
-					class="mb-4 text-[18px] font-[500] truncate ..."
+					class="mb-4 text-[18px] font-[500] truncate ... font-inter"
 					v-html="details.summary"
 				></p>
 			</div>

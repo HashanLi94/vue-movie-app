@@ -27,15 +27,15 @@
 	>
 		<div class="section-wrapper page-layout flex flex-col py-8">
 			<div
-				class="section-header flex flex-col space-y-8 md:space-y-0 md:flex-row md:items-center md:justify-between border-b-2 border-white pb-8"
+				class="section-header w-full flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-center lg:justify-between border-b-2 border-white pb-8"
 			>
-				<h2 class="text-xl lg:text-3xl font-bold">Collect your favorites</h2>
-				<div class="search-area">
+				<p class="text-[36px] font-bold">Collect your favourites</p>
+				<div class="search-area w-full lg:w-4/12">
 					<div
-						class="relative mx-auto flex w-full max-w-2xl items-center justify-between rounded-md border border-white shadow-lg bg-[#1D1D1D]"
+						class="relative flex w-full items-center rounded-md border border-white shadow-lg bg-[#1D1D1D]"
 					>
 						<svg
-							class="absolute left-2 block h-5 w-5 text-white"
+							class="absolute left-4 block h-5 w-5 text-white"
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
 							height="24"
@@ -52,8 +52,8 @@
 						<input
 							type="name"
 							name="search"
-							class="h-14 w-full rounded-md py-4 px-40 pl-12 outline-none focus:ring-2 ring-slate-100 bg-[#1D1D1D]"
-							placeholder="Search title and add to the grid"
+							class="h-14 w-full rounded-md py-4 px-12 outline-none focus:ring-2 ring-slate-100 bg-[#1D1D1D] text-[18px] text-[#A3A3A3]"
+							placeholder="Search title and add to grid"
 						/>
 					</div>
 				</div>
