@@ -1,4 +1,5 @@
 <script setup>
+	import locationMap from "../../assets/imgs/Location_map.png";
 	import ContactUsForm from "./../forms/ContactUsForm.vue";
 	import GoogleMap from "./../widgets/GoogleMap.vue";
 	import { ref } from "vue";
@@ -20,7 +21,10 @@
 					<ContactUsForm />
 				</div>
 				<div class="right-side">
-					<GoogleMap />
+					<img
+						:src="locationMap"
+						class="object-cover w-full h-full pt-12 pl-12"
+					/>
 				</div>
 			</div>
 		</div>

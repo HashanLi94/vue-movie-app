@@ -194,7 +194,7 @@
 						<router-link
 							to="/"
 							target="_blank"
-							class="text-white underline hover:opacity-80"
+							class="text-white hover:opacity-80"
 						>
 							Terms and Conditions
 						</router-link>
